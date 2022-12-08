@@ -1,0 +1,40 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet" href="">
+    {% tailwind_css %}
+
+    <!-- INSERT ADITIONAL INFORMATION TO THE HEAD TAG HERE-->
+    {% block head %}
+    {% endblock%}
+
+    <!-- CHANGES THE PAGE TITLE IF THE VARIABLE "title" IS PASSED BY THE VIEW -->
+    {% if title %}
+        <title>{{title}}</title>
+    {% else %}
+    <!-- USE DEFAULT TITLE TEXT IF NO VARIABLE "title" IS PASSED BY THE VIEW -->
+        <title>My Euromihoes App</title>
+    {% endif %}
+</head>
+<body>
+    <!-- BOOTSTRAP NAVBAR CODE -->
+    {% include 'burgernav.html' %}
+
+<div>
+    <!-- INSERT THE CONTENT FROM SPECIFIC PAGES HERE-->
+        {% block content %}
+        {% endblock  %}
+</div>
+
+<div class="mb-12 bg-gradient-to-r from-indigo-600 to-indigo-700 -mt-24 pt-24">
+    <!-- BOOTSTRAP NAVBAR CODE -->
+    {% include 'footernav.html' %}
+</div>
+</body>
+</html>

@@ -2,6 +2,13 @@ from django.db import models
 
 
 # Create your models here.
+class Predict(models.Model):
+    set = models.CharField(max_length=64, unique=True)
+
+    def __str__(self):
+        return self.set
+
+
 class Result(models.Model):
     # Id уже не нужно указывать как во Фласк. Появится сам.
     date = models.CharField(max_length=32)
@@ -12,6 +19,7 @@ class Result(models.Model):
     n5 = models.PositiveIntegerField()
     s1 = models.PositiveIntegerField()
     s2 = models.PositiveIntegerField()
+    image = models.ImageField(upload_to='images', null=True, blank=True)
 
     def __str__(self):
         return self.date

@@ -1,0 +1,24 @@
+{% load static %}
+
+
+        <nav class=" py-2 px-8 max-w-md mx-auto flex overflow-hidden md:max-w-5xl">
+            <div class="mb-12 mx-auto items-center justify-between relative">
+                <!-- Primary Navbar items -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a class="py-2 px-4 bg-violet-400 rounded-md text-white uppercase flex" href="{% url 'euromilhoesapp:index' %}">
+                        <img class="h-6 w-6 mr-2" src="{% static 'assets/images/home icon.svg' %}">home</a>
+                    <a class="py-2 px-4 bg-indigo-800 rounded-md text-white uppercase flex
+                    hover:bg-violet-400 shadow-lg transition duration-300" href="">
+                        <img class="h-6 w-6 mr-2" src="{% static 'assets/images/plots icon.svg' %}">plots</a>
+                    <a class="py-2 px-4 bg-indigo-800 rounded-md text-white uppercase flex
+                    hover:bg-violet-400 shadow-lg transition duration-300" href="{% url 'euromilhoesapp:statistics' %}">
+                        <img class="h-6 w-6 mr-2" src="{% static 'assets/images/stats icon.png' %}">statistics</a>
+                    <a href="{% static 'images/stats icon.png' %}" class="py-2 px-4 bg-indigo-800 rounded-md text-white uppercase flex
+                    hover:bg-violet-400 shadow-lg transition duration-300 ">
+                        <img class="h-6 w-6 mr-2" src="{% static 'assets/images/neuro icon.svg' %}">neuronet</a>
+                    <a href="" class="py-2 px-4 bg-indigo-800 rounded-md text-white uppercase flex
+                    hover:bg-violet-400 shadow-lg transition duration-300 ">
+                        <img class="h-6 w-6 mr-2" src="{% static 'assets/images/cont icon.svg' %}">contacts</a>
+                </div>
+            </div>
+        </nav>
